@@ -1,0 +1,18 @@
+#!/bin/env node
+
+var express = require('express');
+var app = express();
+
+var basepath = process.argv[2] || "~";
+var port = process.argv[3] || 8000;
+
+var exposefs = require('../index');
+
+app.use('/', exposefs({
+	backend: 'filesystem',
+	basepath: basepath
+}));
+
+app.listen(port, function() {
+	console.log("Exposing '" + basepath + "' at port", port);
+});
