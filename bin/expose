@@ -3,7 +3,7 @@
 var express = require('express');
 var app = express();
 
-var basepath = process.argv[2] || "~";
+var basepath = process.argv[2] || process.env['HOME'];
 var port = process.argv[3] || 8000;
 
 var exposefs = require('../index');
