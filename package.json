@@ -1,6 +1,6 @@
 {
   "name": "exposefs",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Exposes you filesystem as a REST API",
   "main": "index.js",
   "scripts": {
