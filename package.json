@@ -2,7 +2,13 @@
   "name": "exposefs",
   "version": "0.0.2",
   "description": "Exposes you filesystem as a REST API",
-  "keywords": ["filesystem", "rest", "api", "fs", "follow"],
+  "keywords": [
+    "filesystem",
+    "rest",
+    "api",
+    "fs",
+    "follow"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/gchaincl/exposefs"
@@ -16,5 +22,10 @@
   "dependencies": {
     "express": "^4.3.2",
     "tail": "^0.3.5"
+  },
+  "devDependencies": {
+    "fake-fs": "^0.3.0",
+    "mocha": "^1.20.0",
+    "supertest": "^0.13.0"
   }
 }
