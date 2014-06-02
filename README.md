@@ -30,6 +30,7 @@ The code above will serve your `home` directory under `/fs` url.
 | List Directory | `GET` | readdir |
 | Retrieve file | `GET` | read |
 | Stat file | `GET` | stat | must use `?stat` |
+| Follow a file | `GET` | follow | must use `?follow` |
 | Create File | `POST` | write |
 | Create Directory | `POST` | mkdir | file name must finish with `/` |
 | Append to File | `PUT` | write |

@@ -9,6 +9,7 @@
   "author": "Gustaf Shin",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.3.2"
+    "express": "^4.3.2",
+    "tail": "^0.3.5"
   }
 }
