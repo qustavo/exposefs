@@ -1,6 +1,6 @@
 {
   "name": "exposefs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Exposes you filesystem as a REST API",
   "keywords": ["filesystem", "rest", "api", "fs", "follow"],
   "repository": {
