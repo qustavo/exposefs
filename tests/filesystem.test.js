@@ -69,8 +69,6 @@ describe('Filesystem', function() {
     });
 
     context("/file", function(done) {
-      // as we use createWriteStream and it's not provided by
-      // fake-fs, we need to create a real file
       beforeEach(function() {
         fs.unpatch();
       });
@@ -88,5 +86,36 @@ describe('Filesystem', function() {
       });
     });
   });
+
+	describe("PUT", function() {
+		beforeEach(function() {
+			fs.unpatch();
+		});
+
+		it("appends data to a file", function(done) {
+			var file = '/tmp/.exposefs_tmp_file';
+			__fs.writeFileSync(file, 'foo');
+
+			request(app).put(file).send('bar')
+				.expect(200, function() {
+					assert.equal(
+						'foobar', __fs.readFileSync(file).toString()
+					);
+					__fs.unlink(file);
+					done();
+				});
+		});
+	});
+
+	describe("DELETE", function() {
+		it("removes file", function(done) {
+			fs.file('/file');
+			request(app).delete('/file')
+				.expect(200, function() {
+					assert.equal(fs.existsSync('/file'), false);
+					done();
+				});
+		});
+	});
 
 });
