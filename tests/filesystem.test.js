@@ -44,9 +44,9 @@ describe('Filesystem', function() {
         request(app).get('/file').expect(200, this.content, done);
       });
 
-      context("?stats", function() {
+      context("?stat", function() {
         it("returns the stat of a file", function(done) {
-          request(app).get('/file?stats')
+          request(app).get('/file?stat')
             .expect(200, function() {
               JSON.stringify(fs.statSync('/file'));
               done();
