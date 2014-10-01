@@ -1,5 +1,7 @@
 ## ExposeFS
 
+[![Build Status](https://travis-ci.org/gchaincl/exposefs.svg)](https://travis-ci.org/gchaincl/exposefs)
+
 Let's RESTify your filesystem
 
 ## Usage
